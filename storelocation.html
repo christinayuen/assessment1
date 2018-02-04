@@ -4,102 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>I Want Flowers</title>
+    <!-- created by Christina Yuen -->
 </head>
 <body>
-    <nav class="menu">
-        <ul> 
-            <li><a href="index.html"> Home Page</a></li>
-            <li><a href="product.html"> Product Page</a></li>
-            <li><a href="storelocation.html"> Store Location Page</a></li>
-            <li><a href="contactus.html"> Contact Us Page</a></li>    
-        </ul>   
-    </nav>
+    <div class="container">
 
-    <h1 class="page_heading">Store Locations</h1>
-
-    <div>
-        <ol>
-            <li>
-                <h3>Randwick Store</h3>
-                <div>
-                    <p>Address : 123 Randwick road Randwick 2000</p>
-                    <p>Phone : 123-12334</p>
-                    <p>Opening Hours : Monday to Friday : 9am to 5 pm</p>
-                </div>
-            </li>    
+        <nav class="menu">
+            <ul> 
+                <li><a href="index.html"> Home Page</a></li>
+                <li><a href="product.html"> Product Page</a></li>
+                <li><a href="storelocation.html"> Store Location Page</a></li>
+                <li><a href="contactus.html"> Contact Us Page</a></li>    
+            </ul>   
+        </nav>
+    
+        <h1 class="page_heading">Store Locations</h1>
+    
+        <div>
+            <ol>
+                <li>
+                    <h3>Randwick Store</h3>
+                    <div>
+                        <p>Address : 123 Randwick road Randwick 2000</p>
+                        <p>Phone : <a href="tel:12312334">123-12334</a></p>
+                        <p>Opening Hours : Monday to Friday : 9am to 5 pm</p>
+                    </div>
+                </li>    
+                    
+           
+                <li>
+                    <h3>Coogee Store</h3>
+                    <div>                        
+                        <p>Address : 123 Coogee road Coogee 2000</p>
+                        <p>Phone : <a href="tel:12312334">123-12334</a></p>
+                        <p>Opening Hours : Monday to Friday : 9am to 5 pm</p>
+                    </div>
+                    
+                </li>
+    
+                <li>
+                    <h3>Bondi Store</h3>
+                    <div> 
+                        <p>Address : 123 Bondi road Bondi 2000</p>
+                        <p>Phone : <a href="tel:12312334">123-12334</a></p>
+                        <p>Opening Hours : Monday to Friday : 9am to 5 pm</p>
+                    </div>
+                </li>    
                 
-       
-            <li>
-                <h3>Coogee Store</h3>
-                <div>                        
-                    <p>Address : 123 Coogee road Coogee 2000</pli>
-                    <p>Phone : 123-12334</p>
-                    <p>Opening Hours : Monday to Friday : 9am to 5 pm</p>
-                </div>
-                
-            </li>
-
-            <li>
-                <h3>Bondi Store</h3>
-                <div> 
-                    <p>Address : 123 Bondi road Bondi 2000</p>
-                    <p>Phone : 123-12334</p>
-                    <p>Opening Hours : Monday to Friday : 9am to 5 pm</p>
-                </div>
-            </li>    
-            
-            <li>
-                <h3>Clovelly Store</h3>
-                <div>                                               
-                    <p>Address : 123 Clovelly road Clovelly 2000</p>
-                    <p>Phone : 123-12334</p>
-                    <p>Opening Hours : Monday to Friday : 9am to 5 pm</p>
-                </div>
-            </li> 
-            <div id="map"></div>    
-        </ol>
+                <li>
+                    <h3>Clovelly Store</h3>
+                    <div>                                               
+                        <p>Address : 123 Clovelly road Clovelly 2000</p>
+                        <p>Phone : <a href="tel:12312334">123-12334</a></p>
+                        <p>Opening Hours : Monday to Friday : 9am to 5 pm</p>
+                    </div>
+                </li> 
+            </ol>
+            <div id="map"></div>
+        </div>
+    
+        <footer>
+            <p>Created By : Christina Yuen, Skillage IT Copyright © I Want Flowers 2018</p>
+        
+        </footer>
     </div>
 
-    <footer>
-        <p>Created By : Christina Yuen, Skillage IT Copyright © I Want Flowers 2018</p>
-            
-    </footer>
+    <script >
+        function initMap() {
+            var randwick = {lat: -33.901, lng: 151.230};
+            var coogee = {lat: -33.920, lng: 151.258};
+            var bondi = {lat: -33.891, lng: 151.276};
+            var clovelly = {lat: -33.913, lng: 151.266};
+            var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 13,
+            center: coogee
+            });
+            var marker = new google.maps.Marker({
+            position: randwick,
+            map: map
+            });
+            var marker = new google.maps.Marker({
+            position: coogee,
+            map: map
+            });
+            var marker = new google.maps.Marker({
+            position: bondi,
+            map: map
+            });
+            var marker = new google.maps.Marker({
+            position: clovelly,
+            map: map
+            });
+        }
+    </script>
 
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-eoqGIB3JTpjTlkWg16hbEGuOBkfPaZo&callback=initMap">
+</script>
 </body>
-<script>
-function initMap() {
-    var randwick = {lat: -33.901, lng: 151.230};
-    var coogee = {lat: -33.920, lng: 151.258};
-    var bondi = {lat: -33.891, lng: 151.276};
-    var clovelly = {lat: -33.913, lng: 151.266};
-    var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 13,
-    center: coogee
-    });
-    var marker = new google.maps.Marker({
-      position: randwick,
-      map: map
-    });
-    var marker = new google.maps.Marker({
-      position: coogee,
-      map: map
-    });
-    var marker = new google.maps.Marker({
-      position: bondi,
-      map: map
-    });
-    var marker = new google.maps.Marker({
-      position: clovelly,
-      map: map
-    });
-}
-</script>
-
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-eoqGIB3JTpjTlkWg16hbEGuOBkfPaZo&callback=initMap">
-</script>
 </html>
     
 
